@@ -1,0 +1,34 @@
+Monday:
+
+XGet your project setup in Objective-C
+XCreate a single view controller, that has a map view that takes up most the screen, and 3 buttons below it.
+The 3 buttons should set the region on the map view to 3 cool locations, you pick the locations.
+Implement Stack and Queue in Objective-C. You can implement them in the same project as your map app is in, since Objective-C does not support playgrounds.
+Tuesday:
+
+Using core location, display the users location on the map
+Add a long press gesture to the map view
+On long press,  add an annotation onto the map view, which has a callout with an accessory button
+Upon pressing the accessory button, segue to a AddReminderDetailViewController
+Wednesday
+
+Using Region monitoring & local notifications, schedule a location based reminder in the AddReminderDetailViewController
+Add a visual map annotation wherever a reminder is added, using NSNotificationCenter to communicate from the Detail view controller back to the primary map view controller
+Thursday
+
+Create a WatchKit extension for your app, that will display the reminders on the watch when a boundary is crossed.
+
+
+Locations:
+
+Barringer Meteor Crater
+35.027185, -111.022388
+Winslow, Arizona
+
+Spaceport America
+32.9869371, -106.9720099
+Southern New Mexico
+
+DARPA
+41.8176912,-139.6688975
+Arlington, VA
