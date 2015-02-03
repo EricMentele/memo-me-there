@@ -75,10 +75,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="craterLoc" destination="1bi-MF-nZS" id="pdS-ji-1GH"/>
-                        <outlet property="darpaLoc" destination="0bm-hg-jSn" id="tJ5-Hy-QOi"/>
+                        <outlet property="craterLocButton" destination="1bi-MF-nZS" id="ku0-S7-cog"/>
+                        <outlet property="darpaLocButton" destination="0bm-hg-jSn" id="SP0-dj-dAm"/>
                         <outlet property="mapView" destination="eok-Ht-To0" id="fXa-E3-nzX"/>
-                        <outlet property="spacePortLoc" destination="Gdq-Uc-usI" id="pSB-kv-ezb"/>
+                        <outlet property="spacePortLocButton" destination="Gdq-Uc-usI" id="O7y-LQ-Vwj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
