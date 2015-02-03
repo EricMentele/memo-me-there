@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Map View Controller" id="vXZ-lx-hvc" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +17,69 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eok-Ht-To0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="521"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdq-Uc-usI">
+                                <rect key="frame" x="259" y="529" width="82" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="dmW-SX-sbp"/>
+                                </constraints>
+                                <state key="normal" title="Spaceport">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bm-hg-jSn">
+                                <rect key="frame" x="349" y="529" width="82" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="7hU-d5-VEi"/>
+                                </constraints>
+                                <state key="normal" title="DARPA">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bi-MF-nZS">
+                                <rect key="frame" x="169" y="529" width="82" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="abq-Zl-iz1"/>
+                                    <constraint firstAttribute="width" constant="82" id="qUu-qd-OXg"/>
+                                </constraints>
+                                <state key="normal" title="Crater">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1bi-MF-nZS" secondAttribute="bottom" constant="20" symbolic="YES" id="ILc-iu-VFO"/>
+                            <constraint firstItem="Gdq-Uc-usI" firstAttribute="top" secondItem="1bi-MF-nZS" secondAttribute="top" id="IhR-mr-EMe"/>
+                            <constraint firstItem="1bi-MF-nZS" firstAttribute="baseline" secondItem="Gdq-Uc-usI" secondAttribute="firstBaseline" id="U47-PR-eoP"/>
+                            <constraint firstItem="Gdq-Uc-usI" firstAttribute="leading" secondItem="1bi-MF-nZS" secondAttribute="trailing" constant="8" symbolic="YES" id="aK2-XJ-6Ve"/>
+                            <constraint firstItem="Gdq-Uc-usI" firstAttribute="baseline" secondItem="1bi-MF-nZS" secondAttribute="firstBaseline" id="b7G-UM-mui"/>
+                            <constraint firstItem="eok-Ht-To0" firstAttribute="centerX" secondItem="Gdq-Uc-usI" secondAttribute="centerX" id="hbA-rW-BhZ"/>
+                            <constraint firstItem="Gdq-Uc-usI" firstAttribute="baseline" secondItem="0bm-hg-jSn" secondAttribute="firstBaseline" id="hzr-14-oM0"/>
+                            <constraint firstAttribute="trailing" secondItem="eok-Ht-To0" secondAttribute="trailing" id="iDt-pp-ffo"/>
+                            <constraint firstItem="0bm-hg-jSn" firstAttribute="baseline" secondItem="Gdq-Uc-usI" secondAttribute="baseline" id="jhd-Tu-Myx"/>
+                            <constraint firstItem="eok-Ht-To0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lLN-AL-lK9"/>
+                            <constraint firstItem="0bm-hg-jSn" firstAttribute="leading" secondItem="Gdq-Uc-usI" secondAttribute="trailing" constant="8" symbolic="YES" id="o93-wh-3qn"/>
+                            <constraint firstItem="Gdq-Uc-usI" firstAttribute="top" secondItem="0bm-hg-jSn" secondAttribute="top" id="oH9-fl-4y0"/>
+                            <constraint firstItem="1bi-MF-nZS" firstAttribute="top" secondItem="eok-Ht-To0" secondAttribute="bottom" constant="8" symbolic="YES" id="t2Q-SJ-j4o"/>
+                            <constraint firstItem="eok-Ht-To0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tu7-St-RuB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eok-Ht-To0" secondAttribute="bottom" id="xYs-Xg-1OK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xYs-Xg-1OK"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="craterLoc" destination="1bi-MF-nZS" id="pdS-ji-1GH"/>
+                        <outlet property="darpaLoc" destination="0bm-hg-jSn" id="tJ5-Hy-QOi"/>
+                        <outlet property="mapView" destination="eok-Ht-To0" id="fXa-E3-nzX"/>
+                        <outlet property="spacePortLoc" destination="Gdq-Uc-usI" id="pSB-kv-ezb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
