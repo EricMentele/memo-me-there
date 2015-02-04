@@ -48,6 +48,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Memo Me There would like to use your location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Memo Me There would like to use your location.</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		409003DC1A813A33007641EE /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 409003DB1A813A33007641EE /* Stack.m */; };
 		40C5CCD11A805955006F6C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCD01A805955006F6C2B /* main.m */; };
 		40C5CCD41A805955006F6C2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCD31A805955006F6C2B /* AppDelegate.m */; };
 		40C5CCDA1A805955006F6C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C5CCD81A805955006F6C2B /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		40C5CCF71A805A0D006F6C2B /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 40C5CCF61A805A0D006F6C2B /* readme */; };
 		40C5CCFA1A8074A8006F6C2B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCF91A8074A8006F6C2B /* MapViewController.m */; };
 		40C5CCFF1A8075D0006F6C2B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCFE1A8075D0006F6C2B /* Person.m */; };
+		40E1EDB41A8191BC00E11E0E /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EDB31A8191BC00E11E0E /* Queue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		409003DA1A813A33007641EE /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		409003DB1A813A33007641EE /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		40C5CCCB1A805955006F6C2B /* memo-me-there.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "memo-me-there.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C5CCCF1A805955006F6C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C5CCD01A805955006F6C2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		40C5CCF91A8074A8006F6C2B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		40C5CCFE1A8075D0006F6C2B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		40C5CD011A8075F7006F6C2B /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		40E1EDB21A8191BC00E11E0E /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		40E1EDB31A8191BC00E11E0E /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 				40C5CCFB1A8074C3006F6C2B /* Controller */,
 				40C5CCFD1A8074C8006F6C2B /* View */,
 				40C5CCCE1A805955006F6C2B /* Supporting Files */,
+				409003DA1A813A33007641EE /* Stack.h */,
+				409003DB1A813A33007641EE /* Stack.m */,
+				40E1EDB21A8191BC00E11E0E /* Queue.h */,
+				40E1EDB31A8191BC00E11E0E /* Queue.m */,
 			);
 			path = "memo-me-there";
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 				40C5CCD41A805955006F6C2B /* AppDelegate.m in Sources */,
 				40C5CCFF1A8075D0006F6C2B /* Person.m in Sources */,
 				40C5CCD11A805955006F6C2B /* main.m in Sources */,
+				40E1EDB41A8191BC00E11E0E /* Queue.m in Sources */,
+				409003DC1A813A33007641EE /* Stack.m in Sources */,
 				40C5CCFA1A8074A8006F6C2B /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +471,7 @@
 				40C5CCF01A805955006F6C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40C5CCF11A805955006F6C2B /* Build configuration list for PBXNativeTarget "memo-me-thereTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +480,7 @@
 				40C5CCF31A805955006F6C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

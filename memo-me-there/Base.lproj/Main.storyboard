@@ -29,6 +29,9 @@
                                 <state key="normal" title="Spaceport">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="spacePortGo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7OF-fZ-WOv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bm-hg-jSn">
                                 <rect key="frame" x="349" y="529" width="82" height="51"/>
@@ -38,6 +41,9 @@
                                 <state key="normal" title="DARPA">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="darpaGo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZqX-eQ-cS0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bi-MF-nZS">
                                 <rect key="frame" x="169" y="529" width="82" height="51"/>
@@ -48,6 +54,9 @@
                                 <state key="normal" title="Crater">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="craterGo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Yg-s6-SSl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -4,32 +4,93 @@
 //
 //  Created by Eric Mentele on 2/2/15.
 //  Copyright (c) 2015 Eric Mentele. All rights reserved.
-//
+//--------------------------------Self in a block is a retain cycle unless you declare a weak self. -----------------------------------
 
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController ()
+@interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 @property (weak, nonatomic) IBOutlet UIButton *craterLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *spacePortLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *darpaLocButton;
 
 
-
-
+- (IBAction)craterGo:(id)sender;
+- (IBAction)spacePortGo:(id)sender;
+- (IBAction)darpaGo:(id)sender;
 
 @end
+
 
 @implementation MapViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  
+  [super viewDidLoad];
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.delegate = self;
+  self.mapView.delegate = self;
+  self.mapView.showsUserLocation = YES;
+  
+  if ([CLLocationManager locationServicesEnabled]) {
+    NSLog(@"location services enabled");
+    if ([CLLocationManager authorizationStatus] == 0) {
+      
+      [self.locationManager requestAlwaysAuthorization];
+    } else {
+      
+      //self.mapView.showsUserLocation = true;
+      [self.locationManager startMonitoringSignificantLocationChanges];
+    }//else1
+  } else {
+    
+    UIAlertView *locationAlert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"Location: services are not turned on." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [locationAlert show];
+  }//if location services enabled
+}//viewDidLoad
+
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+  
+  CLLocationCoordinate2D loc = [userLocation coordinate];
+  MKCoordinateRegion mregion = MKCoordinateRegionMakeWithDistance(loc, 500, 500);
+  self.mapView.region = mregion;
 }
+
+
+//MARK: Buttons
+-(void)craterGo:(id)sender{
+  
+  CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(35.027185, -111.022388);
+  MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 1500, 1500)];
+  [self.mapView setRegion:adjustedRegion animated:YES];
+  self.mapView.mapType = MKMapTypeSatellite;
+}
+
+- (IBAction)spacePortGo:(id)sender {
+  
+  CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(32.9869371, -106.9720099);
+  MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 2000, 2000)];
+  [self.mapView setRegion:adjustedRegion animated:YES];
+  self.mapView.mapType = MKMapTypeSatellite;
+}
+
+- (IBAction)darpaGo:(id)sender {
+  
+  CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(38.878746,-77.108711);
+  MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
+  [self.mapView setRegion:adjustedRegion animated:YES];
+  self.mapView.mapType = MKMapTypeSatellite;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,5 +106,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
