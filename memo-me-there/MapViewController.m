@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "MemoViewController.h"
 
 @interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
@@ -126,6 +127,12 @@
 //Send annotaion information to detail view controller.
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   
+  if ([segue.identifier isEqualToString:@"locationDetail"]) {
+    
+    MemoViewController *MemoVC = (MemoViewController *)segue.destinationViewController;
+    MemoVC.annotation = self.selectedAnnotation;
+    MemoVC.locationManager = self.locationManager;
+  }
   
 }
 

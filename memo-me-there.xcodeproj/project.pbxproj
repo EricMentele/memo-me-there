@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		409003DC1A813A33007641EE /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 409003DB1A813A33007641EE /* Stack.m */; };
+		40C196D91A82D45500392CB0 /* MemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C196D81A82D45500392CB0 /* MemoViewController.m */; };
 		40C5CCD11A805955006F6C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCD01A805955006F6C2B /* main.m */; };
 		40C5CCD41A805955006F6C2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCD31A805955006F6C2B /* AppDelegate.m */; };
 		40C5CCDA1A805955006F6C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C5CCD81A805955006F6C2B /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		409003DA1A813A33007641EE /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		409003DB1A813A33007641EE /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		40C196D71A82D45500392CB0 /* MemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoViewController.h; sourceTree = "<group>"; };
+		40C196D81A82D45500392CB0 /* MemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoViewController.m; sourceTree = "<group>"; };
 		40C5CCCB1A805955006F6C2B /* memo-me-there.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "memo-me-there.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C5CCCF1A805955006F6C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C5CCD01A805955006F6C2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				40C5CCD31A805955006F6C2B /* AppDelegate.m */,
 				40C5CCF81A8074A8006F6C2B /* MapViewController.h */,
 				40C5CCF91A8074A8006F6C2B /* MapViewController.m */,
+				40C196D71A82D45500392CB0 /* MemoViewController.h */,
+				40C196D81A82D45500392CB0 /* MemoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				40C5CCD41A805955006F6C2B /* AppDelegate.m in Sources */,
 				40C5CCFF1A8075D0006F6C2B /* Person.m in Sources */,
 				40C5CCD11A805955006F6C2B /* main.m in Sources */,
+				40C196D91A82D45500392CB0 /* MemoViewController.m in Sources */,
 				40E1EDB41A8191BC00E11E0E /* Queue.m in Sources */,
 				409003DC1A813A33007641EE /* Stack.m in Sources */,
 				40C5CCFA1A8074A8006F6C2B /* MapViewController.m in Sources */,
