@@ -36,7 +36,6 @@
   self.locationManager = [[CLLocationManager alloc] init];
   self.locationManager.delegate = self;
   self.mapView.delegate = self;
-  self.mapView.showsUserLocation = YES;
   
   if ([CLLocationManager locationServicesEnabled]) {
     NSLog(@"location services enabled");
@@ -45,7 +44,7 @@
       [self.locationManager requestAlwaysAuthorization];
     } else {
       
-      //self.mapView.showsUserLocation = true;
+      self.mapView.showsUserLocation = YES;
       [self.locationManager startMonitoringSignificantLocationChanges];
     }//else1
   } else {
@@ -53,9 +52,13 @@
     UIAlertView *locationAlert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"Location: services are not turned on." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [locationAlert show];
   }//if location services enabled
+  
+  UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(mapLongPressed:)];
+  [self.mapView addGestureRecognizer:longPress];
 }//viewDidLoad
 
 
+//Start map center on user location.
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
   
   CLLocationCoordinate2D loc = [userLocation coordinate];
@@ -64,7 +67,26 @@
 }
 
 
-//MARK: Buttons
+//MARK: GESTURE RECOGNIZER
+-(void)mapLongPressed:(id)sender {
+  
+  UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer*)sender;
+  
+  if (longPress.state == 3) {
+    
+    NSLog(@"Long press worked!");
+    CGPoint location = [longPress locationInView:self.mapView];
+    CLLocationCoordinate2D coordinates = [self.mapView convertPoint: location toCoordinateFromView:self.mapView];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    annotation.coordinate = coordinates;
+    annotation.title = @"New Location";
+    [self.mapView addAnnotation:annotation];
+  }//if press 3
+}//map long pressed
+
+
+//MARK: BUTTONS
 -(void)craterGo:(id)sender{
   
   CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(35.027185, -111.022388);
