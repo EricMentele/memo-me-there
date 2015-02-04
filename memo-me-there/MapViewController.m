@@ -16,6 +16,8 @@
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
+@property (strong,nonatomic)  MKPointAnnotation * selectedAnnotation;
+
 @property (weak, nonatomic) IBOutlet UIButton *craterLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *spacePortLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *darpaLocButton;
@@ -38,6 +40,7 @@
   self.mapView.delegate = self;
   
   if ([CLLocationManager locationServicesEnabled]) {
+    
     NSLog(@"location services enabled");
     if ([CLLocationManager authorizationStatus] == 0) {
       
@@ -77,7 +80,7 @@
     NSLog(@"Long press worked!");
     CGPoint location = [longPress locationInView:self.mapView];
     CLLocationCoordinate2D coordinates = [self.mapView convertPoint: location toCoordinateFromView:self.mapView];
-    
+    //day 3 homework will modify code here.
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     annotation.coordinate = coordinates;
     annotation.title = @"New Location";
@@ -85,6 +88,46 @@
   }//if press 3
 }//map long pressed
 
+
+//MARK: Location store
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+  
+    CLLocation *location = locations.firstObject;
+}//did update locations
+
+
+//Set up annotaion for location.
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+  
+  MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"AnnotationView"];
+  annotationView.animatesDrop = true;
+  annotationView.pinColor = MKPinAnnotationColorGreen;
+  annotationView.canShowCallout = true;
+  annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeContactAdd];
+  
+  return annotationView;
+}//Annotaion view
+
+
+//Fire segue when annotation pressed
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+  
+  self.selectedAnnotation = view.annotation;
+  //MKPointAnnotation *annotation = view.annotation;
+  
+  [self performSegueWithIdentifier:@"locationDetail" sender:self];
+  
+  NSLog(@"annotation button tapped");
+}//annotaion view call
+
+
+
+
+//Send annotaion information to detail view controller.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  
+  
+}
 
 //MARK: BUTTONS
 -(void)craterGo:(id)sender{

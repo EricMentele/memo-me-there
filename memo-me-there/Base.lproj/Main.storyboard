@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kOD-bb-75o">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -83,15 +83,54 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="2iW-X4-kYX"/>
                     <connections>
                         <outlet property="craterLocButton" destination="1bi-MF-nZS" id="ku0-S7-cog"/>
                         <outlet property="darpaLocButton" destination="0bm-hg-jSn" id="SP0-dj-dAm"/>
                         <outlet property="mapView" destination="eok-Ht-To0" id="fXa-E3-nzX"/>
                         <outlet property="spacePortLocButton" destination="Gdq-Uc-usI" id="O7y-LQ-Vwj"/>
+                        <segue destination="Kl3-mf-kf0" kind="show" identifier="locationDetail" id="605-Cl-ewg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1185" y="255"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eip-pG-x4E">
+            <objects>
+                <viewController id="Kl3-mf-kf0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gfy-yp-si8"/>
+                        <viewControllerLayoutGuide type="bottom" id="c2n-08-eUq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYf-Lm-cgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PU-Pg-RGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="255"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hDg-oB-SLs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kOD-bb-75o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OKd-rU-Z7v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="6XP-EE-sWg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zkm-c4-HfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="255"/>
         </scene>
     </scenes>
 </document>
