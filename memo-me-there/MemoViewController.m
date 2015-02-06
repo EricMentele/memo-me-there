@@ -18,27 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   NSLog(@" long: %f lat: %f", self.annotation.coordinate.longitude, self.annotation.coordinate.latitude);
-}
+}//view did load
 
 
-- (IBAction)memoButtonPressed:(id)sender {
-  NSLog(@"MEMO ME");
+- (IBAction)addMemoButtonPressed:(id)sender {
+
+  if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+    
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:500 identifier:@"Reminder"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"memoAdded" object:self userInfo:@{@"memo" : region}]; 
+  }//if CL Location Manager
   
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+}//add memo button pressed
 
 @end

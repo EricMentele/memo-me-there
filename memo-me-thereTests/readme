@@ -9,8 +9,8 @@ Tuesday:
 
 XUsing core location, display the users location on the map
 XAdd a long press gesture to the map view
-On long press,  add an annotation onto the map view, which has a callout with an accessory button
-Upon pressing the accessory button, segue to a AddReminderDetailViewController
+XOn long press,  add an annotation onto the map view, which has a callout with an accessory button
+XUpon pressing the accessory button, segue to a AddReminderDetailViewController
 Wednesday
 
 Using Region monitoring & local notifications, schedule a location based reminder in the AddReminderDetailViewController

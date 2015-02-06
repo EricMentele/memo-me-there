@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kOD-bb-75o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kOD-bb-75o">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
@@ -58,9 +58,19 @@
                                     <action selector="craterGo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Yg-s6-SSl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHa-Tx-FCp">
+                                <rect key="frame" x="252" y="491" width="96" height="30"/>
+                                <state key="normal" title="User Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userLocButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3YM-cY-DAo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="kHa-Tx-FCp" secondAttribute="centerX" id="42s-SK-ltk"/>
                             <constraint firstAttribute="bottom" secondItem="1bi-MF-nZS" secondAttribute="bottom" constant="20" symbolic="YES" id="ILc-iu-VFO"/>
                             <constraint firstItem="Gdq-Uc-usI" firstAttribute="top" secondItem="1bi-MF-nZS" secondAttribute="top" id="IhR-mr-EMe"/>
                             <constraint firstItem="1bi-MF-nZS" firstAttribute="baseline" secondItem="Gdq-Uc-usI" secondAttribute="firstBaseline" id="U47-PR-eoP"/>
@@ -70,6 +80,7 @@
                             <constraint firstItem="Gdq-Uc-usI" firstAttribute="baseline" secondItem="0bm-hg-jSn" secondAttribute="firstBaseline" id="hzr-14-oM0"/>
                             <constraint firstAttribute="trailing" secondItem="eok-Ht-To0" secondAttribute="trailing" id="iDt-pp-ffo"/>
                             <constraint firstItem="0bm-hg-jSn" firstAttribute="baseline" secondItem="Gdq-Uc-usI" secondAttribute="baseline" id="jhd-Tu-Myx"/>
+                            <constraint firstItem="Gdq-Uc-usI" firstAttribute="top" secondItem="kHa-Tx-FCp" secondAttribute="bottom" constant="8" id="krG-SJ-sq5"/>
                             <constraint firstItem="eok-Ht-To0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lLN-AL-lK9"/>
                             <constraint firstItem="0bm-hg-jSn" firstAttribute="leading" secondItem="Gdq-Uc-usI" secondAttribute="trailing" constant="8" symbolic="YES" id="o93-wh-3qn"/>
                             <constraint firstItem="Gdq-Uc-usI" firstAttribute="top" secondItem="0bm-hg-jSn" secondAttribute="top" id="oH9-fl-4y0"/>
@@ -114,7 +125,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="memoButtonPressed:" destination="Kl3-mf-kf0" eventType="touchUpInside" id="Lgb-4q-cfA"/>
+                                    <action selector="addMemoButtonPressed:" destination="Kl3-mf-kf0" eventType="touchUpInside" id="WwL-Dn-TZh"/>
                                 </connections>
                             </button>
                         </subviews>
