@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		409003DC1A813A33007641EE /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 409003DB1A813A33007641EE /* Stack.m */; };
+		40A44B301A85891200690C0D /* watchMapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A44B2F1A85891200690C0D /* watchMapInterfaceController.m */; };
 		40B88E711A84733000D280D7 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B88E701A84733000D280D7 /* InterfaceController.m */; };
 		40B88E741A84733000D280D7 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B88E731A84733000D280D7 /* NotificationController.m */; };
 		40B88E771A84733000D280D7 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B88E761A84733000D280D7 /* GlanceController.m */; };
@@ -17,6 +18,8 @@
 		40B88E871A84733000D280D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B88E861A84733000D280D7 /* Images.xcassets */; };
 		40B88E8A1A84733000D280D7 /* memo-me-there WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40B88E6A1A84733000D280D7 /* memo-me-there WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40B88E971A8479B000D280D7 /* MemoWatchRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B88E961A8479B000D280D7 /* MemoWatchRowController.m */; };
+		40B88E9C1A85380300D280D7 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B88E9B1A85380300D280D7 /* Node.m */; };
+		40B88E9F1A85388900D280D7 /* Linked-List.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B88E9E1A85388900D280D7 /* Linked-List.m */; };
 		40C196D91A82D45500392CB0 /* MemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C196D81A82D45500392CB0 /* MemoViewController.m */; };
 		40C5CCD11A805955006F6C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCD01A805955006F6C2B /* main.m */; };
 		40C5CCD41A805955006F6C2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCD31A805955006F6C2B /* AppDelegate.m */; };
@@ -27,7 +30,6 @@
 		40C5CCF51A805967006F6C2B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C5CCF41A805967006F6C2B /* MapKit.framework */; };
 		40C5CCF71A805A0D006F6C2B /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 40C5CCF61A805A0D006F6C2B /* readme */; };
 		40C5CCFA1A8074A8006F6C2B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCF91A8074A8006F6C2B /* MapViewController.m */; };
-		40C5CCFF1A8075D0006F6C2B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5CCFE1A8075D0006F6C2B /* Person.m */; };
 		40E1EDB41A8191BC00E11E0E /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EDB31A8191BC00E11E0E /* Queue.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 /* Begin PBXFileReference section */
 		409003DA1A813A33007641EE /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		409003DB1A813A33007641EE /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		40A44B2E1A85891200690C0D /* watchMapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = watchMapInterfaceController.h; sourceTree = "<group>"; };
+		40A44B2F1A85891200690C0D /* watchMapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = watchMapInterfaceController.m; sourceTree = "<group>"; };
 		40B88E6A1A84733000D280D7 /* memo-me-there WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "memo-me-there WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B88E6D1A84733000D280D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B88E6E1A84733000D280D7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -86,8 +90,14 @@
 		40B88E821A84733000D280D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B88E841A84733000D280D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		40B88E861A84733000D280D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		40B88E951A8479B000D280D7 /* MemoWatchRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoWatchRowController.h; sourceTree = "<group>"; };
-		40B88E961A8479B000D280D7 /* MemoWatchRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoWatchRowController.m; sourceTree = "<group>"; };
+		40B88E951A8479B000D280D7 /* MemoWatchRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoWatchRowController.h; path = "../memo-me-there/MemoWatchRowController.h"; sourceTree = "<group>"; };
+		40B88E961A8479B000D280D7 /* MemoWatchRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemoWatchRowController.m; path = "../memo-me-there/MemoWatchRowController.m"; sourceTree = "<group>"; };
+		40B88E981A849EBA00D280D7 /* memo-me-there.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "memo-me-there.entitlements"; sourceTree = "<group>"; };
+		40B88E991A849EDB00D280D7 /* memo-me-there WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "memo-me-there WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		40B88E9A1A85380300D280D7 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		40B88E9B1A85380300D280D7 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		40B88E9D1A85388900D280D7 /* Linked-List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Linked-List.h"; sourceTree = "<group>"; };
+		40B88E9E1A85388900D280D7 /* Linked-List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Linked-List.m"; sourceTree = "<group>"; };
 		40C196D71A82D45500392CB0 /* MemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoViewController.h; sourceTree = "<group>"; };
 		40C196D81A82D45500392CB0 /* MemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoViewController.m; sourceTree = "<group>"; };
 		40C5CCCB1A805955006F6C2B /* memo-me-there.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "memo-me-there.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +115,6 @@
 		40C5CCF61A805A0D006F6C2B /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		40C5CCF81A8074A8006F6C2B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		40C5CCF91A8074A8006F6C2B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		40C5CCFE1A8075D0006F6C2B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		40C5CD011A8075F7006F6C2B /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		40E1EDB21A8191BC00E11E0E /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		40E1EDB31A8191BC00E11E0E /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +148,11 @@
 		40B88E6B1A84733000D280D7 /* memo-me-there WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				40B88E991A849EDB00D280D7 /* memo-me-there WatchKit Extension.entitlements */,
+				40B88E951A8479B000D280D7 /* MemoWatchRowController.h */,
+				40B88E961A8479B000D280D7 /* MemoWatchRowController.m */,
+				40A44B2E1A85891200690C0D /* watchMapInterfaceController.h */,
+				40A44B2F1A85891200690C0D /* watchMapInterfaceController.m */,
 				40B88E6F1A84733000D280D7 /* InterfaceController.h */,
 				40B88E701A84733000D280D7 /* InterfaceController.m */,
 				40B88E721A84733000D280D7 /* NotificationController.h */,
@@ -205,6 +218,7 @@
 		40C5CCCD1A805955006F6C2B /* memo-me-there */ = {
 			isa = PBXGroup;
 			children = (
+				40B88E981A849EBA00D280D7 /* memo-me-there.entitlements */,
 				40C5CCFC1A8074C6006F6C2B /* Model */,
 				40C5CCFB1A8074C3006F6C2B /* Controller */,
 				40C5CCFD1A8074C8006F6C2B /* View */,
@@ -213,6 +227,10 @@
 				409003DB1A813A33007641EE /* Stack.m */,
 				40E1EDB21A8191BC00E11E0E /* Queue.h */,
 				40E1EDB31A8191BC00E11E0E /* Queue.m */,
+				40B88E9A1A85380300D280D7 /* Node.h */,
+				40B88E9B1A85380300D280D7 /* Node.m */,
+				40B88E9D1A85388900D280D7 /* Linked-List.h */,
+				40B88E9E1A85388900D280D7 /* Linked-List.m */,
 			);
 			path = "memo-me-there";
 			sourceTree = "<group>";
@@ -253,8 +271,6 @@
 				40C5CCF91A8074A8006F6C2B /* MapViewController.m */,
 				40C196D71A82D45500392CB0 /* MemoViewController.h */,
 				40C196D81A82D45500392CB0 /* MemoViewController.m */,
-				40B88E951A8479B000D280D7 /* MemoWatchRowController.h */,
-				40B88E961A8479B000D280D7 /* MemoWatchRowController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -262,8 +278,6 @@
 		40C5CCFC1A8074C6006F6C2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40C5CD011A8075F7006F6C2B /* Person.h */,
-				40C5CCFE1A8075D0006F6C2B /* Person.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,6 +377,11 @@
 					40B88E691A84733000D280D7 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 8F48NKUJX6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					40B88E7B1A84733000D280D7 = {
 						CreatedOnToolsVersion = 6.2;
@@ -371,6 +390,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 8F48NKUJX6;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -449,6 +471,7 @@
 			files = (
 				40B88E971A8479B000D280D7 /* MemoWatchRowController.m in Sources */,
 				40B88E741A84733000D280D7 /* NotificationController.m in Sources */,
+				40A44B301A85891200690C0D /* watchMapInterfaceController.m in Sources */,
 				40B88E711A84733000D280D7 /* InterfaceController.m in Sources */,
 				40B88E771A84733000D280D7 /* GlanceController.m in Sources */,
 			);
@@ -459,12 +482,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C5CCD41A805955006F6C2B /* AppDelegate.m in Sources */,
-				40C5CCFF1A8075D0006F6C2B /* Person.m in Sources */,
+				40B88E9F1A85388900D280D7 /* Linked-List.m in Sources */,
 				40C5CCD11A805955006F6C2B /* main.m in Sources */,
 				40C196D91A82D45500392CB0 /* MemoViewController.m in Sources */,
 				40E1EDB41A8191BC00E11E0E /* Queue.m in Sources */,
 				409003DC1A813A33007641EE /* Stack.m in Sources */,
 				40C5CCFA1A8074A8006F6C2B /* MapViewController.m in Sources */,
+				40B88E9C1A85380300D280D7 /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -536,6 +561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -544,11 +570,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = "memo-me-there WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -667,10 +695,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_ENTITLEMENTS = "memo-me-there/memo-me-there.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "memo-me-there/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Debug;
@@ -680,10 +711,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_ENTITLEMENTS = "memo-me-there/memo-me-there.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "memo-me-there/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Release;
@@ -732,6 +766,7 @@
 				40B88E8E1A84733000D280D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40B88E901A84733000D280D7 /* Build configuration list for PBXNativeTarget "memo-me-there WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -740,6 +775,7 @@
 				40B88E8C1A84733000D280D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40C5CCC61A805955006F6C2B /* Build configuration list for PBXProject "memo-me-there" */ = {
 			isa = XCConfigurationList;

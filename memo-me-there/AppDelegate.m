@@ -19,8 +19,7 @@
   
   if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
     
-    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|
-                                                   UIUserNotificationTypeBadge| UIUserNotificationTypeSound categories:nil]];
+    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
   }//if
   return YES;
 }//

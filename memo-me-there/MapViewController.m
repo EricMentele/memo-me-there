@@ -13,12 +13,10 @@
 
 @interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
-
-@property (nonatomic, retain) IBOutlet MKMapView *mapView;
-@property (nonatomic, retain) CLLocationManager *locationManager;
-
+@property (strong,nonatomic) CLLocationManager *locationManager;
 @property (strong,nonatomic)  MKPointAnnotation * selectedAnnotation;
 
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIButton *craterLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *spacePortLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *darpaLocButton;

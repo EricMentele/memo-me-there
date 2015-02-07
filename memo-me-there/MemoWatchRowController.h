@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WatchKit/WatchKit.h> 
 
 @interface MemoWatchRowController : NSObject
+
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *memoLabel;
 
 @end

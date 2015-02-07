@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--watchRowController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="watchRowController" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <table alignment="left" id="oDi-bT-6os">
                             <items>
@@ -18,13 +18,34 @@
                                             <label alignment="left" text="Label" id="oDM-Co-9dg"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="memoLabel" destination="oDM-Co-9dg" id="vV6-uz-YdZ"/>
+                                        <segue destination="K9G-A0-ckV" kind="push" id="K2P-SD-8AB"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="watchTable" destination="oDi-bT-6os" id="bPd-Oh-Qbf"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Watch Map Interface Controller-->
+        <scene sceneID="tYh-mY-m7x">
+            <objects>
+                <controller id="K9G-A0-ckV" customClass="watchMapInterfaceController">
+                    <items>
+                        <map height="132" alignment="left" id="4cy-OW-vf8"/>
+                    </items>
+                    <connections>
+                        <outlet property="watchMap" destination="4cy-OW-vf8" id="03k-zj-2Ik"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="424" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
