@@ -7,6 +7,8 @@
 //
 
 #import "watchMapInterfaceController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h> 
 
 
 @interface watchMapInterfaceController()
@@ -21,7 +23,7 @@
     
   self.region = context;
   
-  MKCoordinateRegion region = MKCoordinateRegionMake(self.region.center,MKCoordinateSpanMake(0.5, 0.5));
+  MKCoordinateRegion region = MKCoordinateRegionMake(self.region.center,MKCoordinateSpanMake(0.8, 0.8));
   [self.watchMap setRegion:region];
   }
 

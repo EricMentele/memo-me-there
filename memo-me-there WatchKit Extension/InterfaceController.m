@@ -10,7 +10,6 @@
 #import "MemoWatchRowController.h"
 #import <CoreLocation/CoreLocation.h>
 
-
 @interface InterfaceController()
 
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *watchTable;
@@ -26,21 +25,20 @@
   
   CLLocationManager *locationManager = [CLLocationManager new];
   NSSet *regions = locationManager.monitoredRegions;
-  NSArray *regionsArray = regions.allObjects;
+  self.regionsArray = regions.allObjects;
   
-  [self.watchTable setNumberOfRows:regionsArray.count withRowType:@"watchRow"];
+  [self.watchTable setNumberOfRows:self.regionsArray.count withRowType:@"watchRow"];
 
   NSInteger index = 0;
-  for (CLCircularRegion *region in regionsArray) {
+  for (CLCircularRegion *region in self.regionsArray) {
     
     MemoWatchRowController *rowController = [self.watchTable rowControllerAtIndex:index];
     [rowController.memoLabel setText:region.identifier];
     
-    NSLog(region.identifier);
     index++;
   }
 
-    // Configure interface objects here.
+
 }
 
 

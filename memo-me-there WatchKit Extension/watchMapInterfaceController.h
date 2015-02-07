@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 
 @interface watchMapInterfaceController : WKInterfaceController
+
 @property (weak, nonatomic) IBOutlet WKInterfaceMap *watchMap;
 @property (strong,nonatomic) CLCircularRegion *region;
 

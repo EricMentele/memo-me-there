@@ -25,7 +25,7 @@
 
   if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
     
-    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:500 identifier:@"Memo"];
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:500 identifier:@"memo"];
     
     [self.locationManager startMonitoringForRegion:region];
     [self.locationManager.monitoredRegions allObjects];

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--watchRowController-->
+        <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="watchRowController" id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <table alignment="left" id="oDi-bT-6os">
                             <items>
@@ -41,7 +41,7 @@
                         <map height="132" alignment="left" id="4cy-OW-vf8"/>
                     </items>
                     <connections>
-                        <outlet property="watchMap" destination="4cy-OW-vf8" id="03k-zj-2Ik"/>
+                        <outlet property="watchMap" destination="4cy-OW-vf8" id="LXc-Op-I8P"/>
                     </connections>
                 </controller>
             </objects>

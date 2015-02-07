@@ -63,15 +63,6 @@
 }//viewDidLoad
 
 
-//Start map center on user location.
-//- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-//
-//  CLLocationCoordinate2D loc = [userLocation coordinate];
-//  MKCoordinateRegion mregion = MKCoordinateRegionMakeWithDistance(loc, 500, 500);
-//  self.mapView.region = mregion;
-//}//didUpdateUserLocation
-
-
 //MARK: GESTURE RECOGNIZER
 -(void)mapLongPressed:(id)sender {
   
@@ -95,6 +86,7 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
   
   CLLocation *location = locations.firstObject;
+  
 }//did update locations
 
 
@@ -152,6 +144,7 @@
   NSDictionary *userInfo = notification.userInfo;
   CLCircularRegion *region = userInfo[@"memo"];
   NSLog(@"MEMO ADDED!!!!!!");
+  
   MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
   
   [self.mapView addOverlay:circleOverlay];
