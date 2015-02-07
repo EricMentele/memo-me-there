@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1289650E-47EE-4B28-8D3F-5E563CF01342</string>
+	<key>IDESourceControlProjectName</key>
+	<string>memo-me-there</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0323A906609E101AD7EA6CC3459CBE16A06095D</key>
+		<string>https://github.com/EricMentele/memo-me-there.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>memo-me-there.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0323A906609E101AD7EA6CC3459CBE16A06095D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/EricMentele/memo-me-there.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0323A906609E101AD7EA6CC3459CBE16A06095D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0323A906609E101AD7EA6CC3459CBE16A06095D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>memo-me-there</string>
+		</dict>
+	</array>
+</dict>
+</plist>
