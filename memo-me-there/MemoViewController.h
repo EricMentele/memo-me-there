@@ -12,6 +12,7 @@
 
 @interface MemoViewController : UIViewController
 
+//These hold the values from mapVC that have been passed in prepare for segue.
 @property (strong,nonatomic) MKPointAnnotation *annotation;
 @property (strong,nonatomic) CLLocationManager *locationManager;
 

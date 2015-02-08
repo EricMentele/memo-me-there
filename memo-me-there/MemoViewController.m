@@ -24,13 +24,13 @@
 - (IBAction)addMemoButtonPressed:(id)sender {
 
   if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
-    
-    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:500 identifier:@"memo"];
+    NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:300 identifier:identifier];
     
     [self.locationManager startMonitoringForRegion:region];
     [self.locationManager.monitoredRegions allObjects];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"memoAdded" object:self userInfo:@{@"memo" : region}]; 
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"memoAdded" object:self userInfo:@{@"memo" : region}];
   }//if CL Location Manager
   
   

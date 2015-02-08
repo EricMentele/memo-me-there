@@ -4,7 +4,7 @@
 //
 //  Created by Eric Mentele on 2/5/15.
 //  Copyright (c) 2015 Eric Mentele. All rights reserved.
-//
+//Got help from Rodrigo with watch map display code.
 
 #import "InterfaceController.h"
 #import "MemoWatchRowController.h"
@@ -36,10 +36,8 @@
     [rowController.memoLabel setText:region.identifier];
     
     index++;
-  }
-
-
-}
+  }//for CL Circular Region
+}//awakeWithContext
 
 
 -(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
@@ -55,6 +53,8 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+  [self.watchTable setNumberOfRows:self.regionsArray.count withRowType:@"watchRow"];
+  
 }
 
 @end

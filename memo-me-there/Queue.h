@@ -10,4 +10,10 @@
 
 @interface Queue : NSObject
 
+@property (strong,nonatomic) NSMutableArray *items;
+
+-(void)enqueue:(id)item;
+-(id)dequeue;
+-(id)peek;
+
 @end

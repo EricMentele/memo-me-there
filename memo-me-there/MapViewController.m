@@ -10,21 +10,18 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "MemoViewController.h"
+#import "Stack.h"
+#import "Queue.h"
 
 @interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (strong,nonatomic) CLLocationManager *locationManager;
 @property (strong,nonatomic)  MKPointAnnotation * selectedAnnotation;
 
-@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIButton *craterLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *spacePortLocButton;
 @property (weak, nonatomic) IBOutlet UIButton *darpaLocButton;
-
-
-- (IBAction)craterGo:(id)sender;
-- (IBAction)spacePortGo:(id)sender;
-- (IBAction)darpaGo:(id)sender;
 
 @end
 
@@ -49,7 +46,7 @@
       [self.locationManager requestAlwaysAuthorization];
     } else {
       
-      self.mapView.showsUserLocation = YES;
+      self.mapView.showsUserLocation = true;
       [self.locationManager startMonitoringSignificantLocationChanges];
     }//else1
   } else {
@@ -60,6 +57,29 @@
   
   UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(mapLongPressed:)];
   [self.mapView addGestureRecognizer:longPress];
+  
+  //MARK: DATA STRUCTURE TESTS
+  //MARK: Stack
+  NSLog(@"THIS IS THE STACK TEST");
+  Stack *stack = [[Stack alloc]init];
+  [stack push:@"hi"];
+  [stack push:@"ho"];
+  [stack push:@"he"];
+  [stack push:@"hr"];
+  [stack peek];
+  [stack pop];
+  [stack peek];
+  
+  //MARK: Queue
+  NSLog(@"THIS IS THE QUEUE TEST");
+  Queue *queue = [[Queue alloc]init];
+  [queue enqueue:@"hi"];
+  [queue enqueue:@"ho"];
+  [queue enqueue:@"he"];
+  [queue enqueue:@"hr"];
+  [queue peek];
+  [queue dequeue];
+  [queue peek];
 }//viewDidLoad
 
 
@@ -82,11 +102,10 @@
 }//map long pressed
 
 
-//MARK: Location store
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
   
   CLLocation *location = locations.firstObject;
-  
+   NSLog(@"latitide: %f and longitude: %f",location.coordinate.latitude, location.coordinate.longitude);
 }//did update locations
 
 
@@ -115,16 +134,26 @@
 }//annotaion view call
 
 
+//Fire memo.
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
   
+  NSLog(@"did enter region");
   UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-  localNotification.alertBody = @"region entered!";
-  localNotification.alertAction = @"region action";
-  
+  localNotification.alertBody = @"Region entered!";
+  localNotification.alertAction = nil;
   [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
-  [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-}//location manager
+}//did enter region
 
+
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+  
+  NSLog(@"did exit region");
+  UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+  localNotification.alertBody = @"Left area!";
+  localNotification.alertAction = nil;
+  [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+}//did exit region
 
 //Send annotaion information to detail view controller.
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -139,11 +168,13 @@
 }
 
 
+//This adds the circular region to be rendered
 -(void) memoAdded:(NSNotification *)notification {
   
   NSDictionary *userInfo = notification.userInfo;
+  
   CLCircularRegion *region = userInfo[@"memo"];
-  NSLog(@"MEMO ADDED!!!!!!");
+  NSLog(@"Circular region added.");
   
   MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
   
@@ -151,6 +182,7 @@
 }//memoAdded
 
 
+//This renders the added circular region.
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
   
   MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithOverlay:overlay];

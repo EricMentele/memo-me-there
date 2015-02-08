@@ -10,4 +10,34 @@
 
 @implementation Queue
 
+-(instancetype)init {
+  
+  self = [super init];
+  if (self) {
+    
+    _items = [[NSMutableArray alloc] init];
+  }
+  return self;
+}
+
+
+-(void)enqueue:(id)item {
+  
+  [_items addObject:item];
+}
+
+
+-(id)dequeue{
+  
+  id item = _items.firstObject;
+  [_items removeObjectAtIndex:0];
+  return item;
+}
+
+
+-(id)peek{
+  
+  NSLog(@"%@",_items.firstObject);
+  return _items.firstObject;
+}
 @end

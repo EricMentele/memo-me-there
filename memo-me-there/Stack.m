@@ -15,9 +15,30 @@
   self = [super init];
   if (self) {
     
-    self.items = [[NSMutableArray alloc] init];
+    _items = [[NSMutableArray alloc] init];
   }
   return self;
+}
+
+
+-(void)push:(id)item {
+  
+  [_items addObject:item];
+}
+
+
+-(id)peek{
+  
+  NSLog(@"%@",_items.lastObject);
+  return _items.lastObject;
+}
+
+
+-(id)pop{
+  
+  id item = _items.lastObject;
+  [_items removeLastObject];
+  return item;
 }
 
 @end
