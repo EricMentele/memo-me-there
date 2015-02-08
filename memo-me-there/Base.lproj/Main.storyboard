@@ -121,7 +121,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dec-sV-FmP">
                                 <rect key="frame" x="277" y="550" width="48" height="30"/>
-                                <state key="normal" title="MEMO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="gbN-Qh-AzV"/>
+                                </constraints>
+                                <state key="normal" title="Memo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -131,8 +134,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Dec-sV-FmP" secondAttribute="centerX" constant="-1" id="4ws-g7-b2J"/>
-                            <constraint firstItem="c2n-08-eUq" firstAttribute="top" secondItem="Dec-sV-FmP" secondAttribute="bottom" constant="20" id="hIv-aU-3Fe"/>
+                            <constraint firstAttribute="bottom" secondItem="Dec-sV-FmP" secondAttribute="bottom" constant="20" symbolic="YES" id="NUk-1k-ABk"/>
+                            <constraint firstItem="Dec-sV-FmP" firstAttribute="leading" secondItem="aYf-Lm-cgZ" secondAttribute="leading" constant="277" id="WHK-Q5-QNK"/>
                         </constraints>
                     </view>
                 </viewController>
